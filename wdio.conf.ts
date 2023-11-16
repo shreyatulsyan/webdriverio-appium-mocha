@@ -13,8 +13,9 @@ export const config: Options.Testrunner = {
             transpileOnly: true
         }
     },
-    
+    path: '/wd/hub',
     port: 4723,
+    outputDir:'Logs',
     //
     // ==================
     // Specify Test Files
@@ -63,10 +64,14 @@ export const config: Options.Testrunner = {
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
         platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
+        //browserName: 'Chrome',
+        'appium:deviceName': 'Pixel_133',
         'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:automationName': 'UiAutomator2',
+        'appium:app':'app/android/Android-NativeDemoApp-0.4.0.apk',
+        "appium:fullReset": false,
+        "appium:appActivity": "com.wdiodemoapp.MainActivity",
+        "appium:appPackage": "com.wdiodemoapp",
     }],
 
     //
