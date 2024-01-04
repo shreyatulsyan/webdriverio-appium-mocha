@@ -12,6 +12,10 @@ class SwipePage{
     public get webdriverIOLogo(){
         return $('~WebdriverIO logo')
     }
+
+    public get webdriverioLinkInWeb(){
+        return $(`//a[@title='http://webdriver.io']`)
+    }
 }
 
 
